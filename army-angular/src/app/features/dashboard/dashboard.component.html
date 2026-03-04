@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="dashboard.component.css">
+    <div class="dashboard">
+
+  <div class="topbar glass">
+   <h2 *ngIf="user; else loading">
+  ⚔️ WELCOME, {{ user.username }}
+</h2>
+
+<ng-template #loading>
+  <h2>Welcome , Loading...</h2>
+</ng-template>
+
+
+    <button class="logout" (click)="logout()">Logout</button>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero glass">
+    <img
+      src="https://gadyalkashmir.com/wp-content/uploads/2024/01/Indian-Army-4.jpg"
+      alt="Indian Army"
+    />
+
+    <div class="hero-text">
+      <h1>INDIAN ARMY: SERVICE BEFORE SELF</h1>
+      <p>Guardians of the Nation</p>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="glass card">
+      <h3>ABOUT THE INDIAN ARMY</h3>
+
+      <p>
+        The Indian Army is the land-based branch of the Indian Armed Forces.
+        It protects the nation’s borders, conducts counter-terror operations,
+        and ensures national security with modern infantry, artillery,
+        armoured and special forces.
+      </p>
+    </div>
+
+    <div class="glass card">
+      <h3>MISSION & VISION</h3>
+
+      <p><b>MISSION:</b> Defend the sovereignty of the nation.</p>
+      <p><b>VISION:</b> Modern, agile & technology-driven force.</p>
+    </div>
+
+  </div>
+
+  <!-- GLOBAL POWER -->
+  <div class="glass stats">
+
+    <h3>GLOBAL LAND POWER STATUS</h3>
+
+    <div class="stats-grid">
+
+      <div>
+        <p>ACTIVE PERSONNEL</p>
+        <h2>1.2M+</h2>
+      </div>
+
+      <div>
+        <p>ARMOURED VEHICLES</p>
+        <h2>4500+</h2>
+      </div>
+
+      <div>
+        <p>ARTILLERY GUNS</p>
+        <h2>4000+</h2>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
