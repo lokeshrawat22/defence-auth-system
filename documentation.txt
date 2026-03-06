@@ -1,0 +1,92 @@
+*1. What to install 
+1. Php PHP 8.5.3
+https://www.php.net/downloads
+2. Node js v25.2.1 
+https://nodejs.org/en/download
+
+*2. How to run all Servers
+1. airforce-php 
+php -S localhost:8000
+
+2. army-angular
+npm install -g @angular/cli
+npx ng serve
+
+3. backend
+node server
+
+4. auth-portal
+npm run dev
+
+5. navy-react
+npm start
+
+
+*3 Databases used 
+1. Postgresql 
+https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+2. Mysql 
+https://dev.mysql.com/downloads/installer/ 
+
+3. Mongodb 
+https://www.mongodb.com/try/download/community
+
+*4 Setup
+1. Backend
+cd backend
+npm install
+
+2. Angular
+cd army-angular
+npm install
+
+3. React (Vite)
+cd navy-react
+npm install
+npm run dev
+
+4.  PHP
+cd airforce-php
+php -S localhost:8000
+
+*5 .env File In Backend
+# PostgreSQL
+PG_HOST=localhost
+PG_PORT=5432
+PG_USER=postgres
+PG_PASSWORD=yourpassword
+PG_DATABASE=airforce
+
+CREATE TABLE army_users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(100) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+CMD 
+psql -U postgres
+\du
+\l
+CREATE DATABASE defenceauth;
+
+
+# MySQL
+MYSQL_HOST=localhost
+MYSQL_USER=root
+MYSQL_PASSWORD=yourpassword
+MYSQL_DATABASE=army
+
+
+CREATE TABLE army_users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+# MongoDB
+MONGO_URI=mongodb://127.0.0.1:27017/navy
